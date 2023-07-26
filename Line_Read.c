@@ -1,24 +1,14 @@
 #include "main.h"
 /**
  * read_stream - Read a line from the input stream (stdin).
- *
  * Return: A pointer to the read line as a dynamically allocated string.
- *	The caller is responsible for freeing the allocated memory.
- *	Returns NULL in case of reaching EOF or a memory allocation error.
  */
 char *read_stream(void)
 {
-	 /*Initial buffer size for reading the line*/
-	int bufferSize = 1024;
-
-	/*Allocate memory for the line*/
-	char *line = malloc(sizeof(char) * bufferSize);
-
-	/*Variable to store the read character*/
-	int character;
-
-	/*Index to track the current position in the line*/
-	int line_idx = 0;
+	int bufferSize = 1024; /*Initial buffer size for reading the line*/
+	char *line = malloc(sizeof(char) * bufferSize);	/*Allocate memory to line*/
+	int character; /*Variable to store the read character*/
+	int line_idx = 0; /*Index to track the current position in the line*/
 
 	if (line == NULL)
 	{
@@ -50,7 +40,7 @@ char *read_stream(void)
 			line = realloc(line, bufferSize);
 			if (line == NULL)
 			{
-				fprintf(stderr, "Error: Reallocation error in read_stream\n");
+				fprintf(stderr, "Reallocation error in read_stream\n");
 				exit(EXIT_FAILURE);
 			}
 		}

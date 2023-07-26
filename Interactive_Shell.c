@@ -13,7 +13,7 @@ void shell_interactive(void)
 
 	while (exit_status == -1)
 	{
-		printf("-$ "); /* print prompt symbol */
+		printf("$** "); /* print prompt symbol */
 		input_line = read_line(); /* read line from stdin */
 		arguments = split_line(input_line); /* tokenize line */
 		exit_status = execute_args(arguments);
