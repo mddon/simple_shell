@@ -1,1 +1,1 @@
-## Simple shell = Implementing the UNIX simple shell
+## SIMPLE SHELL: Implementing the UNIX simple shell
