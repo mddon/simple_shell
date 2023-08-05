@@ -1,6 +1,6 @@
 /*
  * File: errors.c
- * Auth: Miracle Okafor
+ * Auth: Miracle Okafor &&
  *       Divine Eke
  */
 
